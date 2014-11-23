@@ -1,0 +1,57 @@
+.tabela{
+	display:table;
+	width:100%;
+	text-align:center;
+}
+
+.linha{  
+	padding:0;  
+	clear:both;
+	display: table-row;
+}  
+
+.celula{          
+	display: table-cell;
+	clear: both;
+	padding:0.5em;
+} 
+
+/* Este bloco permite que o texto fique à esquerda respeitando a largura proporcional dos elementos */
+
+.bloco{
+	text-align:left;
+	display:inline-block;
+	vertical-align: text-top;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+/*Em telas menores desfaço o espaçamento proporcional e alinho os elementos um abaixo do outro*/
+   
+@media screen and (max-width: 520px) {
+
+	.celula{          
+		float:left;
+	} 
+
+	.tabela{
+		text-align:left;
+	}
+	
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
